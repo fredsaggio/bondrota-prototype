@@ -10,6 +10,8 @@ Protótipo de alta fidelidade desenvolvido como simulação do aplicativo BondRo
 
 Tela inicial do sistema onde o usuário informa suas credenciais para acessar a plataforma.
 
+![Tela de Login](public/screenshots/login.png)
+
 - **Campos**: E-mail e Senha
 - **Comportamento**: Ao clicar em "Entrar Agora", o sistema exibe um feedback visual de carregamento e, após 1,5 segundo, redireciona o usuário para a tela inicial (Home)
 - **Validação**: Caso algum campo esteja vazio, um alerta é exibido solicitando o preenchimento
@@ -21,6 +23,8 @@ Tela inicial do sistema onde o usuário informa suas credenciais para acessar a 
 
 Painel principal do sistema com uma visão geral das funcionalidades disponíveis.
 
+![Tela Home](public/screenshots/home.png)
+
 - **Saudação dinâmica**: Exibe "Bom Dia!", "Boa Tarde!" ou "Boa Noite!" de acordo com o horário atual
 - **Data atual**: Mostra a data completa no formato brasileiro (ex: "quinta-feira, 3 de abril de 2026")
 - **Banner visual**: Imagem de destaque com mensagem de boas-vindas
@@ -31,67 +35,47 @@ Painel principal do sistema com uma visão geral das funcionalidades disponívei
   - ❌ Cadastrar Ponto — desabilitado (sem tela implementada)
   - ❌ Acessar Dados — desabilitado (sem tela implementada)
   - ✅ Transmissão — navegável
-- **Requisito atendido**: Navegação funcional apenas para as telas com protótipo disponível; demais aparecem desabilitadas
+- **Menu Lateral (Sidebar)**: Presente em todas as telas internas, com logo "BondRota", seções de Cadastro e Dados no Sistema, e destaque visual no item ativo
 
 ---
 
-### 3. Menu Lateral (Sidebar)
-
-Presente em todas as telas internas (Home, Cadastros e Transmissão).
-
-- **Logo e nome**: Exibe o ícone e o nome "BondRota"
-- **Seções**:
-  - **Home** — link para a tela inicial
-  - **Cadastro** — links para Aluno, Motorista, Ônibus (desabilitado) e Ponto (desabilitado)
-  - **Dados no Sistema** — links para Acessar Dados (desabilitado) e Transmissão
-- **Destaque visual**: O item ativo na navegação é destacado com fundo diferenciado
-- **Requisito atendido**: Apenas as telas com protótipo são clicáveis; as demais ficam esmaecidas e sem interação
-
----
-
-### 4. Tela de Cadastro de Aluno (`/cadastro/aluno`)
+### 3. Tela de Cadastro de Aluno (`/cadastro/aluno`)
 
 Formulário para registro de novos alunos no sistema de transporte.
 
-- **Campos disponíveis**:
-  - Nome Completo
-  - CPF
-  - Instituição de Ensino
-  - Curso
-  - Data de Nascimento
-  - Turno
-  - Rota
-- **Botão "Cadastrar Aluno"**: Exibe um toast (notificação) confirmando que o aluno foi cadastrado com sucesso, incluindo o nome informado
-- **Botão "Limpar Formulário"**: Reseta todos os campos do formulário
+![Cadastro de Aluno](public/screenshots/cadastro-aluno.png)
+
+- **Campos**: Nome Completo, CPF, Instituição de Ensino, Curso, Data de Nascimento, Turno, Rota
+- **Botão "Cadastrar Aluno"**: Exibe uma notificação confirmando que o aluno foi cadastrado com sucesso
+- **Botão "Limpar Formulário"**: Reseta todos os campos
 - **Validação**: Exige pelo menos o nome do aluno preenchido
 - **Requisito atendido**: Feedback visual de cadastro realizado sem necessidade de banco de dados
 
 ---
 
-### 5. Tela de Cadastro de Motorista (`/cadastro/motorista`)
+### 4. Tela de Cadastro de Motorista (`/cadastro/motorista`)
 
 Formulário para registro de novos motoristas.
 
-- **Campos disponíveis**:
-  - Nome Completo
-  - CPF
-  - Telefone
-  - Data de Nascimento
-  - Turno
-- **Botão "Cadastrar Motorista"**: Exibe um toast confirmando o cadastro do motorista
+![Cadastro de Motorista](public/screenshots/cadastro-motorista.png)
+
+- **Campos**: Nome Completo, CPF, Telefone, Data de Nascimento, Turno
+- **Botão "Cadastrar Motorista"**: Exibe uma notificação confirmando o cadastro
 - **Botão "Limpar Formulário"**: Reseta todos os campos
 - **Validação**: Exige pelo menos o nome do motorista preenchido
 - **Requisito atendido**: Feedback visual de cadastro realizado sem necessidade de banco de dados
 
 ---
 
-### 6. Tela de Transmissão (`/transmissao`)
+### 5. Tela de Transmissão (`/transmissao`)
 
 Tela de monitoramento em tempo real dos veículos.
 
-- **Mapa interativo**: Renderizado com a biblioteca Leaflet utilizando tiles do OpenStreetMap, centralizado na região de São Paulo
-- **Painel lateral**: Exibe o título "Motoristas" e um nome de motorista de exemplo ("João Ferreira Silva")
-- **Requisito atendido**: Exibição do mapa funcional com seção de motoristas visível; não inclui rastreamento GPS real pois seria necessário integração com hardware
+![Tela de Transmissão](public/screenshots/transmissao.png)
+
+- **Mapa interativo**: Renderizado com Leaflet + OpenStreetMap, centralizado em São Paulo
+- **Painel lateral**: Título "Motoristas" com nome de motorista de exemplo ("João Ferreira Silva")
+- **Requisito atendido**: Mapa funcional com seção de motoristas; não inclui rastreamento GPS real
 
 ---
 

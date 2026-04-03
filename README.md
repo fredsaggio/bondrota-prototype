@@ -101,11 +101,3 @@ npm run dev
 ```
 
 O projeto será iniciado em `http://localhost:5173`.
-
----
-
-## 📝 Observações
-
-- Este protótipo é uma **simulação sem backend**. Nenhum dado é persistido em banco de dados.
-- Os feedbacks de sucesso (cadastro, login) são exibidos através de notificações visuais (toasts).
-- As telas de Cadastro de Ônibus, Cadastro de Ponto e Acessar Dados não foram implementadas pois não faziam parte do escopo solicitado.
